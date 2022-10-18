@@ -1,0 +1,94 @@
+body {
+   margin: 0;
+   font-family: Helvetica, sans-serif;
+}
+
+* {box-sizing: border-box;}
+
+.skewed-menu {
+   width: 100%;
+   height: 100vh;
+   min-height: 30em;
+   display: flex;
+   justify-content: space-between;
+   overflow: hidden;
+}
+
+.panel-container:nth-child(1) .panel div {
+   background: url(https://images.unsplash.com/photo-1666096968009-f8b7bdd51ba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+}
+
+.panel-container:nth-child(2) .panel div {
+   background: url(https://images.unsplash.com/photo-1666052215005-2354fd24f5d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+}
+
+.panel-container:nth-child(3) .panel div {
+   background: url(https://images.unsplash.com/photo-1666067654612-603aeaaab991?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+}
+
+.panel-container:nth-child(4) .panel div {
+   background: url(https://images.unsplash.com/photo-1665929458331-8dd32b18297a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80);
+}
+
+.panel-container:nth-child(5) .panel div {
+   background: url(https://images.unsplash.com/photo-1665898238233-8a9329959380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+}
+
+.panel-container {
+   display: inline-block;
+   text-decoration: none;
+   flex: 1;
+}
+
+.panel {
+   position: relative;
+   color: #fff;
+   border: 1px #ccc solid;
+   min-width: 5em;
+   min-height: 5em;
+   transition: 0.5s;
+   height: 100%;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.panel div {
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 2em;
+   width: 150%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   z-index: 0;
+}
+
+.panel div::before {
+   content: '';
+   background: rgba(0, 0, 0, 0.5);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 0;
+}
+
+.panel h3 {
+   position: relative;
+   transition: 0.3s;
+   z-index: 1;
+}
+
+.panel:hover {
+   min-width: 40vw;
+   flex: none;
+}
+
+.panel:hover h3 {
+   font-size: 2em;
+}
